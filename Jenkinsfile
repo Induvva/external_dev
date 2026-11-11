@@ -19,7 +19,7 @@ pipeline{
         success{
             echo 'Pipeline completed successfully.'
         }
-        fialure{
+        failure{
             echo 'Pipeline failed.'
         }
     }
