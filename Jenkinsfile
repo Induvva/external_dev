@@ -9,8 +9,8 @@ pipeline{
         }
         stage('Test'){
             steps{
-                echo 'Running tests...'
-                bat "docker run -p 5000:5000 pythonapp:register"
+                echo 'Running Flask tests...'
+                bat "docker run --rm pythonapp:register python -m unittest discover -s tests -v"
             }
         }
         
